@@ -1,0 +1,325 @@
+.trainer-app {
+  display: flex;
+  background-image: url("../../images/tdiet.jpg");
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-size: cover; /* Ensures the background image covers the entire container */
+  min-height: 100vh;
+  background-attachment: fixed;
+  width: 100%; /* Ensures it spans the full width of the screen */
+  position: relative; /* Ensures the content adjusts properly within the layout */
+}
+
+
+.trainer-sidebar {
+  width: 60px;
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -200px;
+}
+
+.sidebar-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.trainer-main-content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto; 
+  margin-bottom: 50px;
+}
+
+.trainer-title {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 3px solid #FF4742;
+  padding-bottom: 10px;
+}
+
+.search-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* Expanded width */
+}
+
+.search-bar {
+  width: 100%;
+  padding: 15px 50px; /* Increased padding for a neat look */
+  border-radius: 20px; /* Rounded corners */
+  border: none;
+  background-color: rgba(44, 44, 44, 0.75);
+  color: white;
+  font-size: 1rem; /* Increased font size */
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px; /* Adjusted position */
+  transform: translateY(-50%);
+  color: white; /* Icon color */
+}
+
+.user-cards-container {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 70px;
+  justify-content: center;
+}
+
+.user-card {
+  background-color:#fbfbfbc6; /* Slightly lighter for contrast */
+  color: black;
+  padding: 10px;
+  border-radius: 10px; /* Rounded corners */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.3s;
+  min-height: 200px; /* Increased height */
+  text-align: center; /* Centered text */
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  width: 380px;
+}
+
+.user-card:hover {
+  transform: scale(1.05); /* Enlarge on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Deeper shadow on hover */
+}
+
+.user-card h4 {
+  color: black;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 10px 0;
+  opacity: 1;
+}
+.user-card p,button{
+  opacity: 1;
+}
+.user-age,
+.fitness-level {
+  font-size: 1rem; /* Font size for age and level */
+  margin: 5px 0;
+}
+
+.suggest-button {
+  background-color: #FF4742; /* Button color */
+  color: black;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px; /* Added horizontal padding */
+  cursor: pointer;
+  margin-top: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  font-family: "Poppins", sans-serif;
+}
+
+.suggest-button:hover {
+  background-color: #2d9c2f;
+  color: white; /* Lighter shade on hover */
+}
+
+.tpopup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.tpopup-content {
+  background-color: #282c34; /* Popup background color */
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Soft shadow */
+  text-align: center;
+}
+
+.tclose-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  resize: none;
+  height: 120px;
+  background-color: rgba(255, 255, 255, 0.9); /* White textarea */
+  color: black; /* Black text */
+}
+
+.submit-button {
+  background-color: #FF4742;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #FF7370; /* Lighter shade on hover */
+}
+
+/* Popup container with dark background */
+.tpopup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85); /* Dark semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure popup is above other elements */
+}
+
+/* Popup content styling */
+.tpopup-content {
+  background-color: #333333; /* Dark grey background */
+  color: white; /* White text */
+  padding: 30px; /* Padding inside the popup */
+  border-radius: 10px; /* Rounded corners */
+  width: 600px;
+  height: 580px; /* Fixed width for the popup */
+  max-width: 90%; /* Adjusts for smaller screens */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); /* Slight shadow for depth */
+  text-align: center; /* Centered text */
+  position: relative; /* For positioning close button */
+}
+.uimg{
+  margin-top: 20px;
+  width: 80px;
+  height: 80px;
+}
+/* Close button styling */
+.tclose-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: white; /* White color for close button */
+  cursor: pointer;
+  font-size: 1.5rem; /* Large enough to be noticeable */
+}
+.dropdown-group{
+  position: relative;
+}
+/* Dropdown input styling */
+.dropdown-group input {
+  width: 70%; /* Full width dropdown */
+  padding: 10px; /* Padding inside the dropdown */
+  border-radius: 8px; /* Rounded edges for dropdown */
+  border: none; /* No border */
+  background-color: rgba(107, 104, 104, 0.85); /* Dark background */
+  color: white; /* White text */
+  font-size: 1rem; /* Consistent font size */
+  margin-bottom: 15px; /* Space between fields */
+  margin-left: 130px;
+  
+}
+.dropdown-group label{
+  position: absolute;
+  left: 10px;
+  top: 14px;
+}
+
+/* Textarea for suggestions */
+textarea {
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding inside the textarea */
+  border-radius: 8px; /* Rounded corners */
+  border: none; /* No border */
+  background-color: rgba(44, 44, 44, 0.85); /* Dark background for textarea */
+  color: white; /* White text */
+  font-size: 1rem; /* Font size */
+  resize: none; /* No resizing */
+  margin-bottom: 15px; /* Space before submit button */
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
+}
+
+/* Submit button */
+.submit-button {
+  width: 100%; /* Full width button */
+  padding: 12px; /* Padding inside the button */
+  border: none; /* No border */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #FF4742; /* Red button */
+  color: black; /* Black text for contrast */
+  font-size: 1rem; /* Font size */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
+}
+
+.submit-button:hover {
+  background-color: #FF7370; /* Lighter red on hover */
+}
+
+.trainer-user-details{
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.epop{
+  width: 80%;
+}
+
+.exbox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+.etext{
+  margin-top: 50px;
+}
+.exbutton{
+  width: 200px;
+}
+.egroup input{
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
+}

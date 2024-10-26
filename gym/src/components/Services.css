@@ -1,0 +1,113 @@
+.unique-container {
+    background-color: #0d0d0d;
+    color: #fff;
+    font-family: poppins,sans-serif;
+    padding: 20px;
+    padding-bottom: 50px;
+  }
+  
+  .unique-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+  
+  .unique-subtitle {
+    display: flex;
+    align-items: center;
+    color: #e64c4c;
+    margin-left: 40%;
+  }
+  
+  .unique-line {
+    display: block;
+    height: 2px;
+    width: 50px;
+    background-color: #e64c4c;
+    margin: 10px;
+  }
+  
+  .unique-title {
+    font-size: 36px;
+    margin: 10px 0;
+  }
+  
+  .unique-button {
+    background-color: transparent;
+    border: 1px solid #e64c4c;
+    color: #e64c4c;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-weight: bold;
+  }
+  .unique-button:hover{
+    background-color: #e64c4c;
+    color: white;
+  }
+  .unique-content {
+    display: flex;
+    margin-top: 20px;
+  }
+  
+  .unique-hero-section {
+    position: relative;
+    width: 20%;
+    margin-left: 10%;
+    margin-right: 20px;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .unique-hero-image {
+    width: 100%;
+    border-radius: 10px;
+    
+  }
+  
+  .unique-hero-text {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: #fff;
+  }
+  
+  .unique-services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 50%;
+  }
+  
+  .unique-service-card {
+    background-color: #292727;
+    box-shadow: rgba(39, 38, 38, 0.5) 0px 2px 4px 0px, rgba(41, 40, 40, 0.5) 0px 2px 16px 0px;     
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .unique-icon {
+    font-size: 40px;
+    color: #e64c4c;
+  }
+  
+  .unique-service-title {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  
+  .unique-service-description {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .unique-read-more {
+    color: #e64c4c;
+    text-decoration: none;
+  }
+  
+  

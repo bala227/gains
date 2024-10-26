@@ -1,0 +1,334 @@
+/* General Styles */
+.app {
+    display: flex;
+    background-image: url("../../images/fruit1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 170vh; 
+    width: 100vw;
+    margin-top: -10px;
+  }
+  
+  /* Sidebar Styles */
+  .sidebar {
+    width: 80px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 180px;
+    height: 170svh;
+
+  }
+  .test{
+    width: 1100px;
+    height: 90svh;
+    margin-left: -250px;
+    margin-top: -150px;
+    
+  }
+  .sidebar-item {
+    margin: 20px 0;
+    font-size: 24px;
+    color: #99aab5;
+    transition: color 0.3s;
+    cursor: pointer;
+  }
+  
+  .sidebar-item.active, .sidebar-item:hover {
+    color: #FF4B2B;
+  }
+  
+  section {
+    margin-bottom: 30px;
+  }
+ 
+  
+  .progress-tracker {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 100px;
+  }
+
+  .progress-card {
+    width: 250px;
+    background-color: #fff;
+    padding: 90px 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    position: relative;
+  }
+  
+  .progress-card h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  .progress-card p{
+    background-color: #55555599;
+    border-radius: 10px;
+    padding: 3px;
+    color: rgba(255, 255, 255, 0.908);
+  }
+  .fat p{
+    padding: 5px 20px;
+  }
+  .yellow {
+    background-color: #ffd700;
+  }
+  
+  .green {
+    background-color: #4caf50;
+  }
+  .blue {
+    background-color:#3a98e5;
+  }
+  
+  .red {
+    background-color:#ec6157;
+  }
+  
+  .calories-for-today {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .calories-chart {
+    height: 300px;
+    width: 500px;
+    margin-top: 20px;
+    background-color: transparent;
+    box-shadow: rgba(255, 255, 255, 0.5) 0px 2px 4px 0px, rgba(255, 255, 255, 0.5) 0px 2px 16px 0px;    
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    padding: 20px 0px;
+  }
+  .dietback{
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: 25px;
+  }
+  .lowerdiet{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-left: 280px;
+  }
+  .cs{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    border: 1px solid black;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+  }
+  .fat{
+    padding: 90px 65px;
+  }
+  .carbs{
+    padding: 90px 35px;
+  }
+  .acarbs{
+    padding: 90px 78px;
+  }
+ /* Popup container */
+.popup-container {
+  position: fixed;
+  top: 30px;
+  left: -500px; /* Initially off the screen */
+  width: 450px;
+  height: 90vh;
+  background-color: rgba(26, 25, 25, 0.897);
+  box-shadow: -5px 0 15px rgba(255, 254, 253, 0.6);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  animation: slideOut 0.4s forwards;
+  border-radius: 20px;
+}
+
+/* Animation for sliding in */
+@keyframes slideIn {
+  0% {
+    left: -500px;
+    opacity: 0;
+  }
+  100% {
+    left: 100px;
+    opacity: 1;
+  }
+}
+
+/* Animation for sliding out */
+@keyframes slideOut {
+  0% {
+    left: 100px;
+    opacity: 1;
+  }
+  100% {
+    left: -500px;
+    opacity: 0;
+  }
+}
+/* When the popup is visible, slide it in */
+.popup-container.show {
+  animation: slideIn 0.4s forwards;
+}
+.popup-container.hide {
+  animation: slideOut 0.4s forwards;
+}
+/* Popup content styling */
+.popup-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.close_button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  position: absolute;
+  right: 10px;
+}
+.botcontainer{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 410px;
+  margin-top: 30px;
+  height: 600px;
+}
+.bothome {
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 85svh;
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+}
+.answer {
+  position: absolute;
+  top: 20px;
+  font-size: 21px;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: auto;
+  background-color: #201f1f;
+  width: 400px;
+  height: 500px;
+}
+
+.user {
+  border-radius: 10px;
+  text-align: right;
+  color: #ff5722;
+  text-align: justify;
+  padding: 15px;
+  background-color: #3b3a479e;
+  margin-bottom: 10px;
+  animation: ani .5s ease-in-out;
+}
+
+.bot {
+  border-radius: 10px;
+  text-align: left;
+  color: #4CAF50;
+  text-align: justify;
+  padding: 15px;
+  background-color:#9561f041;
+  margin-bottom: 10px;
+  font-weight: bold;
+  animation: ani .5s ease-in-out;
+}
+
+.prompt {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  bottom: 10px;
+}
+
+.prompt input {
+
+  padding: 12px;
+  width: 320px;
+  left: 10px;
+  background-color: #3b3a47;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 30px;
+}
+
+.prompt input:focus {
+  outline: none;
+}
+#pre{
+  max-width: 1000px;
+  text-wrap: wrap;
+}
+.no-messages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 1.5rem;
+  color: #666;
+  text-align: center;
+}
+
+@keyframes ani {
+  0%{
+      margin-top: 18px;
+  }
+  50%{
+      margin-top: -8px;
+  }
+  100%{
+      margin-top: 0;
+  }
+}
+.calorie{
+  position: absolute;
+  top: 50px;
+  left: 27%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.calorie h3{
+  color: white;
+  font-size: 22px;
+}
+.calhead{
+  display: flex;
+  justify-content: space-around;
+  gap: 100px;
+}
+.maincalorie{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.errcal{
+  color: white;
+  position: absolute;
+  top: 70px;
+  left: 30%;
+}

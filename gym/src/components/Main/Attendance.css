@@ -1,0 +1,156 @@
+  .attendance {
+    display: flex;
+    background-image: url("../../images/stay.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .amain-chart {
+    margin-left: -10px;
+    width: 600px;
+    height: 600px;
+    margin-top: 50px;
+  }
+  
+  .aside-info {
+    margin-top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    padding-left: 300px;
+  }
+  .ainfo-card {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    position: relative;
+    height: 120px;
+    background-image: url("../../images/curve1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 90px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .ainfo-card #info-p {
+    position: absolute;
+    font-size: 16px;
+    top: 15px;
+    right: 15px;
+  }
+  .ainfo-card #info-h{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .acalendar-container{
+    background-image: url('../../images/calendar1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 610px;
+    height: 600px;
+    position: relative;
+  }
+  .attendtitle{
+    position: absolute;
+    font-size: 1.6rem;
+    top: 120px;
+    left: 230px;
+    color: white;
+  }
+  .acalendar{
+    position: absolute;
+    top: 170px;
+    left: 50px;
+  }
+  /* Override the calendar container */
+.rbc-calendar {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Customize the header (days of the week) */
+.rbc-header {
+  font-size: 10px;
+  font-weight: bold;
+  color: #444;
+  text-transform: uppercase;
+}
+
+/* Style individual day cells */
+.rbc-day-bg {
+  background-color: #ffffff;
+  border: 1px solid #e6e6e6;
+
+}
+
+/* Hover effect on day cells */
+.rbc-day-bg:hover {
+  background-color: #f1f1f1;
+}
+
+/* Style today's cell */
+.rbc-today {
+  background-color: #f4f7fc;
+  border: 2px solid #007bff;
+}
+
+/* Customize event styles (gym days) */
+.rbc-event {
+  background-color: #ff4d4f;
+  color: #fff;
+  border-radius: 4px;
+  padding: 5px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+/* Style the calendar navigation buttons */
+.rbc-toolbar button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+
+.rbc-toolbar button:hover {
+  background-color: #0056b3;
+}
+
+/* Customize the month view headers */
+.rbc-month-view .rbc-header {
+  background-color: #007bff;
+  color: white;
+  padding: 7px 5px;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 10px;
+}
+
+/* Customize weekday and weekend days */
+.rbc-month-row .rbc-date-cell {
+  font-weight: 600;
+  color: #333;
+}
+
+.rbc-month-row .rbc-off-range {
+  color: #bbb; /* Style for days outside the current month */
+}
+
+/* Customize the selected date cell */
+.rbc-selected {
+  background-color: #e0f7fa;
+  color: #007bff;
+  border-radius: 50%;
+}

@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+.trainer-session-management {
+  padding: 50px;
+  background-image: url("../../images/tsession.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.trainer-session-header {
+  margin-top: 100px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left: 200px;
+}
+
+.trainer-title {
+  margin-top: 50px;
+  color: white;
+  width: auto;
+  border-bottom: 3px solid #e74c3c;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.trainer-session-header h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+}
+
+.trainer-session-header input[type="date"],
+.trainer-session-header select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 130px;
+}
+
+.trainer-session-create-button {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  background-color: #3498db; /* Blue color */
+  color: white;
+  cursor: pointer;
+}
+
+.trainer-session-create-button:hover {
+  background-color: #2980b9;
+}
+
+/* Popup Styles */
+.trainer-session-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8); /* Dark background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.trainer-session-popup-content {
+  position: relative;
+  background-color: #222222e7; /* Dark color for popup */
+  padding: 40px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  border-radius: 10px;
+  width: 400px; /* Fixed width */
+}
+
+.trainer-session-popup-heading {
+  color: #e74c3c; /* Red color for heading */
+  font-size: 24px; /* Larger font size */
+  font-weight: bold;
+  text-align: center; /* Center the heading */
+  margin-bottom: 20px;
+}
+
+.trainer-session-popup-close {
+  color: white; /* White color for close button */
+  font-size: 18px;
+  cursor: pointer;
+  float: right;
+}
+
+.trainer-session-popup-close:hover {
+  color: #e74c3c; /* Red on hover */
+}
+
+.trainer-session-popup label {
+  display: block;
+  margin-bottom: 10px;
+  color: white; /* White text for labels */
+}
+
+.trainer-session-popup input,
+.trainer-session-popup select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px; /* Gap between elements */
+}
+
+.trainer-session-popup-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  
+}
+
+.trainer-session-popup-buttons button {
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  margin-top: 10px;
+  padding: 15px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  flex-grow: 1;
+  margin: 0 5px; 
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+
+/* Session List Styles */
+.trainer-session-list {
+  margin-left: 200px;
+  margin-top: 30px;
+  display: flex; /* Flexbox for horizontal alignment */
+  flex-wrap: wrap; 
+  gap: 20px; /* Space between session boxes */
+  width: 900px;
+}
+.back-button{
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+.trainer-session-item {
+  position: relative;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 15px;
+  padding-bottom: 40px;
+  margin-bottom: 15px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  width: 320px; /* Adjusted width for session boxes */
+}
+
+.trainer-session-details {
+  margin-bottom: 10px;
+}
+
+.trainer-session-title {
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: bold;
+  color: black; 
+  margin-bottom: 10px;
+}
+
+.trainer-session-users,
+.trainer-session-status,
+.trainer-session-time {
+  color: #333; /* Red color for session details */
+}
+
+.trainer-session-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  position: absolute;
+  bottom: 10px;
+  left: 20%;
+}
+
+.trainer-session-start-button,
+.trainer-session-end-button,
+.trainer-session-cancel-button {
+  padding: 10px 15px; 
+  border-radius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-family: "Poppins",sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.trainer-session-start-button {
+  background-color: #2d9c2f; 
+}
+
+.trainer-session-start-button:hover {
+  background-color: #29752a;
+}
+
+.trainer-session-end-button {
+  background-color: #e74c3c; 
+}
+
+.trainer-session-end-button:hover {
+  background-color: #c0392b;
+}
+
+.trainer-session-cancel-button {
+  background-color: #f39c12;
+}
+
+.trainer-session-cancel-button:hover {
+  background-color: #e67e22;
+}
+.trainer-handwriting{
+  width: 400px;
+  height: 540px;
+  position: fixed;
+  top: 30px;
+  right: 70px;
+}
+.handwriting-names{
+  font-family: "Caveat", cursive;
+  font-size: 35px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
+.trainer-session-time{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0px;
+}

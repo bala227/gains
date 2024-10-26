@@ -1,0 +1,77 @@
+.exsidebar{
+  width: 140px;
+  height: 100vh;
+}
+.es{
+  font-size: 19px;
+}
+.exercise-section {
+    background-image: url("../../images/exercise.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+.exback{
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  color: white;
+}
+.exercise-subtitle {
+  margin-top: 80px;
+  text-align: center;
+  font-size: 28px; 
+  color: #ec6157;
+  margin-bottom: 30px;
+}
+
+.exercise-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.exercise-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff84;
+  width: 300px;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px 0px, rgba(0, 0, 0, 0.5) 0px 2px 16px 0px;    
+  height: 160px;
+  padding: 8px; 
+}
+
+
+.exercise-name {
+  font-weight: bolder; /* Bold exercise names */
+  color: black; /* Dark grey for names */
+  opacity: 1;
+  font-size: large;
+}
+
+.exercise-details {
+  font-weight: bold; /* Bold exercise names */
+  color: #333; /* Dark grey for names */
+  opacity: 1;
+}
+.norecord{
+  color: #333;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 100px;
+  background-color: #ffffff84;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 30px;
+  margin: 0px 550px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px 0px, rgba(0, 0, 0, 0.5) 0px 2px 16px 0px;    
+}
+
