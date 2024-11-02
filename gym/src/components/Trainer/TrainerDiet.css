@@ -112,6 +112,7 @@
 .fitness-level {
   font-size: 1rem; /* Font size for age and level */
   margin: 5px 0;
+  font-weight: 500; 
 }
 
 .suggest-button {
@@ -121,7 +122,8 @@
   border-radius: 4px;
   padding: 10px 20px; /* Added horizontal padding */
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 15px;
+  margin-bottom: 10px;
   text-transform: uppercase;
   font-weight: bold;
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
@@ -300,8 +302,8 @@ textarea {
 
 .trainer-user-details{
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 50px;
 }
 .epop{
   width: 80%;

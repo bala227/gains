@@ -87,7 +87,6 @@ const Dashboard1 = () => {
           <div className="menu-content">
             <ul>
               <li onClick={() => handleMenuClick('/dashboard1')}>Home</li>
-              <li onClick={() => handleMenuClick('/settings')}>Settings</li>
               <li onClick={handleLogoutClick}>Logout</li>
             </ul>
           </div>

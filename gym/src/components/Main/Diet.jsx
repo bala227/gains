@@ -297,12 +297,12 @@ function Diet() {
               <div
                 style={{
                   display: 'flex',
-                  gap: 30,
+                  gap: 60,
                   justifyContent: 'space-between',
                 }}
               >
-                <div>Cholesterol</div>
-                <div>Sodium</div>
+                <div>Soya</div>
+                <div>Munk bean</div>
               </div>
               <div
                 style={{
@@ -311,8 +311,8 @@ function Diet() {
                   justifyContent: 'space-between',
                 }}
               >
-                <span style={{ fontWeight: 'bold' }}>8 mg</span>
-                <span style={{ fontWeight: 'bold' }}>.098mg</span>
+                <span style={{ fontWeight: 'bold' }}>Egg</span>
+                <span style={{ fontWeight: 'bold' }}>Chicken</span>
               </div>
             </div>
             </div>
@@ -324,12 +324,12 @@ function Diet() {
             <div
               style={{
                 display: 'flex',
-                gap: 30,
+                gap: 60,
                 justifyContent: 'space-between',
               }}
             >
-              <div>Cholesterol</div>
-              <div>Sodium</div>
+              <div>Fruits</div>
+              <div>Vegetables</div>
             </div>
             <div
               style={{
@@ -338,8 +338,8 @@ function Diet() {
                 justifyContent: 'space-between',
               }}
             >
-              <span style={{ fontWeight: 'bold' }}>8 mg</span>
-              <span style={{ fontWeight: 'bold' }}>.098mg</span>
+              <span style={{ fontWeight: 'bold' }}>Whole grains</span>
+              <span style={{ fontWeight: 'bold' }}>Dairy</span>
             </div>
           </div>
             </div>
@@ -351,12 +351,12 @@ function Diet() {
             <div
               style={{
                 display: 'flex',
-                gap: 30,
+                gap: 70,
                 justifyContent: 'space-between',
               }}
             >
-              <div>Cholesterol</div>
-              <div>Sodium</div>
+              <div>Rice</div>
+              <div>Chappathi</div>
             </div>
             <div
               style={{
@@ -365,8 +365,8 @@ function Diet() {
                 justifyContent: 'space-between',
               }}
             >
-              <span style={{ fontWeight: 'bold' }}>8 mg</span>
-              <span style={{ fontWeight: 'bold' }}>.098mg</span>
+              <span style={{ fontWeight: 'bold' }}>Oats</span>
+              <span style={{ fontWeight: 'bold' }}>Fish</span>
             </div>
           </div>
         </div>
@@ -378,12 +378,12 @@ function Diet() {
             <div
               style={{
                 display: 'flex',
-                gap: 30,
+                gap: 80,
                 justifyContent: 'space-between',
               }}
             >
-              <div>Cholesterol</div>
-              <div>Sodium</div>
+              <div>Nuts</div>
+              <div>Avocado</div>
             </div>
             <div
               style={{
@@ -392,8 +392,8 @@ function Diet() {
                 justifyContent: 'space-between',
               }}
             >
-              <span style={{ fontWeight: 'bold' }}>8 mg</span>
-              <span style={{ fontWeight: 'bold' }}>.098mg</span>
+              <span style={{ fontWeight: 'bold' }}>Paneer</span>
+              <span style={{ fontWeight: 'bold' }}>Cheese</span>
             </div>
           </div>
         </div>

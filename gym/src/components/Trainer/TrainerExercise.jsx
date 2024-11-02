@@ -81,8 +81,6 @@ function TrainerExercise() {
       });
   };
   
-
-
   return (
 
       <main className="trainer-main-content">
@@ -105,14 +103,11 @@ function TrainerExercise() {
               <div>
               <h4>{user.name}</h4>
               <div className='trainer-user-details'>
-                <div>
-                  <p className="user-age">Age: {user.age}</p>
-                  <p className="fitness-level">Level: {user.bmi}</p>
-                </div>
-                <div>
-                  <p className="user-age">Age: {user.age}</p>
-                  <p className="fitness-level">Level: {user.bmi}</p>
-                </div>
+                  <div style={{display:"flex",gap:20}}>
+                    <p className="user-age">Height : <span style={{fontWeight:"bold"}}>{user.height}</span></p>
+                    <p className="fitness-level">BMI : <span style={{fontWeight:"bold"}}>{user.bmi}</span></p>
+                  </div>
+                  <p className="fitness-level" style={{fontSize:16}}>Weight : <span style={{fontWeight:"bold"}}>{user.weight}</span></p>
               </div>
               </div></div>              
               <button className="suggest-button" onClick={() => togglePopup(user)}>

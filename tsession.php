@@ -21,6 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                'date' => $row['date'],
                'time'=> $row['time'],
                'title'=> $row['title'],
+               'meeting_link'=> $row['meeting_link'],
            );
        }
    }

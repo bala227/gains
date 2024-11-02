@@ -1,10 +1,18 @@
 <?php
-header("Access-Control-Allow-Origin: *");
-header("Content-Type: application/json; charset=UTF-8");
+   header("Content-Type: application/json; charset=UTF-8");
+   header("Access-Control-Allow-Origin: http://localhost:3000"); // Allow your React app
+   header("Access-Control-Allow-Credentials: true"); // Allow credentials
+   header("Access-Control-Allow-Methods: GET, POST, OPTIONS"); // Allowed methods
+   header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
 $conn = mysqli_connect('localhost', 'root', '', 'gym');
 
-$sql = "SELECT username FROM user WHERE category<>'trainer'";
+$sql = "
+    SELECT u.username, b.weight, b.height, b.bmi 
+    FROM user u 
+    LEFT JOIN userbmi b ON u.username = b.username 
+    WHERE u.category <> 'trainer'
+";
 $result = mysqli_query($conn, $sql);
 
 $users = array();
@@ -13,6 +21,9 @@ if ($result->num_rows > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
         $users[] = array(
             'name' => $row['username'],
+            'weight' => $row['weight'],
+            'height' => $row['height'],
+            'bmi' => $row['bmi'],
         );
     }
 }

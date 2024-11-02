@@ -15,6 +15,7 @@ const TrainerSessionManagement = () => {
     userNames: [],
     date: selectedDate,
     time: '',
+    meeting_link:''
   });
   const [users,setusers] = useState([]);
 
@@ -35,9 +36,11 @@ const TrainerSessionManagement = () => {
   },[]); 
   const [setSessions] = useState(initialSessions);
 
-  const handleStartSession = (sessionId) => {
-    console.log(`Session ${sessionId} started`);
+  const handleStartSession = (meetingLink) => {
+    // Open the meeting link in a new tab
+    window.open(`https://meet.google.com/${meetingLink}`, '_blank');
   };
+  
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -98,12 +101,13 @@ const TrainerSessionManagement = () => {
               </div>
 
               <form action='http://localhost/app-dev/trainersession.php' className="trainer-session-actions" method='post'>
-                  <button
-                    className="trainer-session-start-button"
-                    onClick={() => handleStartSession(session.id)}
-                  >
-                    Start Session
-                  </button>
+              <button
+                type="button" // Prevent form submission
+                className="trainer-session-start-button"
+                onClick={() => handleStartSession(session.meeting_link)} // Pass meeting_link to handleStartSession
+              >
+                Start Session
+              </button>
                 <input type="text" hidden name='title' value={session.title}/>  
                 <input type="text" hidden name='date' value={session.date}/>  
                 <input type="text" hidden name='username' value={session.username}/>  
@@ -143,8 +147,12 @@ const TrainerSessionManagement = () => {
               <input type="text" name="time" placeholder="e.g. 3:00 PM - 4:00 PM" onChange={handleInputChange} required/>
             </label>
             <label>
+              Google Meet Code:
+              <input type="text" name="meeting_link" onChange={handleInputChange} required placeholder='e.g. pnt-fjbo-jze'/>
+            </label>
+            <label>
               Session Title:
-              <input type="text" name="title" onChange={handleInputChange} required/>
+              <input type="text" name="title" onChange={handleInputChange} required placeholder='Give title for the meeting'/>
             </label>
             <div className="trainer-session-popup-buttons">
               <button name='session' onClick={handleCreateSession} style={{backgroundColor:"#2d9c2f"}}>Done</button>

@@ -19,11 +19,6 @@ const OnlineSession = () => {
       
   const [selectedDate, setSelectedDate] = useState(new Date().toISOString().slice(0, 10)); // Default: today's date
 
-  const handleCancelSession = (sessionId) => {
-    // Logic for cancelling the session
-    console.log(`Session ${sessionId} cancelled`);
-  };
-
   const handleRescheduleSession = (sessionId) => {
     // Logic for rescheduling the session
     console.log(`Session ${sessionId} rescheduled`);
@@ -58,16 +53,12 @@ const OnlineSession = () => {
                 </div>
                 <div className="session-actions">                  
                       <button
-                        className="cancel-button"
-                        onClick={() => handleCancelSession(session.id)}
-                      >
-                        Cancel
-                      </button>
-                      <button
                         className="reschedule-button"
                         onClick={() => handleRescheduleSession(session.id)}
                       >
-                        Reschedule
+                        <a href={`https://meet.google.com/${session.meeting_link}`} target="_blank" rel="noopener noreferrer" className='reschedule-button'>
+                        Join Session
+                      </a>
                       </button>
                 </div>
               </div>
@@ -76,7 +67,7 @@ const OnlineSession = () => {
           ))}
         </div>
       ) : (
-        <p>No sessions for this day.</p>
+        <p style={{color:"white"}}>No sessions for this day.</p>
       )}
     </div>
   );

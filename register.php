@@ -16,21 +16,10 @@
             $sql = "INSERT INTO user (username,password,category) VALUES ('$username','$password','$category')";
             $conn->query($sql);
 
-            if($category == "gymuser"){
-            
-            $tablename = preg_replace('/[^a-zA-Z0-9_]/', '', $username);
-
-            $sq = "CREATE TABLE `$tablename`(
-                proteins INT,
-                vitamins INT,
-                carbo INT,
-                fats INT
-            )";
-            $conn->query($sq);
-            }
 
             header("Location: http://localhost:3000/SignIn");
         }
         $conn->close();
     }
 ?>
+

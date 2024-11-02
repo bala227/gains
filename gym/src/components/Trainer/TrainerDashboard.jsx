@@ -75,7 +75,6 @@ const TrainerDashboard = () => {
           <div className="menu-content">
             <ul>
               <li onClick={() => handleMenuClick('/trainer-dashboard')}>Home</li>
-              <li onClick={() => handleMenuClick('/trainer-profile')}>Profile</li>
               <li onClick={handleLogoutClick}>Logout</li>
             </ul>
           </div>

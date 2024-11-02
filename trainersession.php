@@ -14,8 +14,9 @@ header("Content-Type: application/json; charset=UTF-8");
     $date = $_POST['date'];
     $time = $_POST['time'];
     $title = $_POST['title'];
+    $meeting_link = $_POST['meeting_link'];
 
-    $sql = "INSERT INTO session (username,date,time,title) VALUES ('$username','$date','$time','$title')";
+    $sql = "INSERT INTO session (username,date,time,title,meeting_link) VALUES ('$username','$date','$time','$title','$meeting_link')";
 
     $conn->query($sql);
     header( "Location:http://localhost:3000/trainersession");

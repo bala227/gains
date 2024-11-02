@@ -27,7 +27,10 @@ function TrainerDiet() {
 
   useEffect(() => {
     // Fetch user data from PHP endpoint
-    fetch('http://localhost/app-dev/trainerdiet.php')
+    fetch('http://localhost/app-dev/trainerdiet.php',{
+      method:"GET",
+      credentials:"include"
+    })
       .then(response => response.json())
       .then(data => setUsers(data))
       .catch(error => console.error('Error fetching users:', error));
@@ -95,14 +98,11 @@ function TrainerDiet() {
               <div>
               <h4>{user.name}</h4>
               <div className='trainer-user-details'>
-                <div>
-                  <p className="user-age">Age: {user.age}</p>
-                  <p className="fitness-level">BMI: {user.bmi}</p>
-                </div>
-                <div>
-                  <p className="user-age">Age: {user.age}</p>
-                  <p className="fitness-level">BMI: {user.bmi}</p>
-                </div>
+                  <div style={{display:"flex",gap:20}}>
+                    <p className="user-age">Height : <span style={{fontWeight:"bold"}}>{user.height}</span></p>
+                    <p className="fitness-level">BMI : <span style={{fontWeight:"bold"}}>{user.bmi}</span></p>
+                  </div>
+                  <p className="fitness-level" style={{fontSize:16}}>Weight : <span style={{fontWeight:"bold"}}>{user.weight}</span></p>
               </div>
               </div></div>              
               <button className="suggest-button" onClick={() => togglePopup(user)}>
@@ -113,8 +113,6 @@ function TrainerDiet() {
         </div>
           </main>
         }
-
-        
       
       {isPopupVisible && (
           <div className={`tpopup-container ${isPopupVisible ? 'show' : 'hide'}`}>
